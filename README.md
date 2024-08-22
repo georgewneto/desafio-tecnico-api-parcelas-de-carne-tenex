@@ -20,3 +20,11 @@ app/Services/ParcelasService.php
 ## Endpoints da API
 - [POST] http://localhost:8000/api/gerar-parcelas
 - [GET] http://localhost:8000/api/carne/{$id}
+
+## Para rodar o projeto
+
+execute os seguintes comandos (antes disso, copiar o arquivo .env enviado por email, dentro da pasta **api-parcelas-de-carne**):
+
+- composer install
+- php artisan migrate
+- php artisan serve (ou php artisan serve --host=0.0.0.0 --port=8000)
