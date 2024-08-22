@@ -1,0 +1,20 @@
+detalhes técnicos
+- PHP 8.3.4 / Laravel 11.1.4
+- criação do projeto: composer create-project --prefer-dist laravel/laravel api-parcelas-de-carne
+- php artisan install:api
+- php artisan make:model Carne -m
+- php artisan make:model Parcelas -m
+- php artisan migrate
+- php artisan make:controller CarneController
+- criação do app/Services/ParcelasService.php
+
+routes/api.php
+- GET /carne/{id}
+- POST /gerar-parcelas
+
+app/Http/Controllers/CarneController.php
+- show($id)
+- store(Request $request)
+
+app/Services/ParcelasService.php
+- gerarParcelas($valor_total, $qtd_parcelas, $data_primeiro_vencimento, $periodicidade, $valor_entrada)
